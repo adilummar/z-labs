@@ -36,20 +36,21 @@ export function IntroProcessSection() {
       </div> */}
 
       {/* Right: Recommended For */}
-      <div className="card-light p-6 lg:p-8 flex flex-col justify-center">
+      <div className="card-light p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
         {/* <p className="text-black/60 text-sm mb-4">Recommended for:</p> */}
         {/* <ul className="text-black text-2xl lg:text-3xl space-y-1"> */}
           {/* <li>Architects</li>
           <li>Designers</li>
           <li>Technicians</li>
           <li>Creatives</li> */}
-          <p className="uppercase text-center py-20 text-black text-2xl lg:text-3xl space-y-1">the complete <span className="font-bold">project management</span> <br/> system for architects</p>
+          <p className="uppercase text-center py-10 sm:py-16 lg:py-20 text-black text-xl sm:text-2xl lg:text-3xl space-y-1">the complete <span className="font-bold">project management</span> <br/> system for architects</p>
 
           {/* Animated Get Started Button */}
           <motion.button
-            className="relative overflow-hidden border-[3px] border-highlight text-black uppercase py-3 pl-8 pr-2 rounded-full text-xl w-fit mx-auto block cursor-pointer select-none"
+            className="relative overflow-hidden border-[3px] border-highlight text-black uppercase py-3 pl-5 pr-3 sm:pl-8 sm:pr-2 rounded-full text-base sm:text-xl w-full max-w-[20rem] sm:w-fit sm:max-w-none mx-auto block cursor-pointer select-none"
             initial="idle"
             whileHover="hover"
+            whileTap={{ scale: 0.98 }}
             style={{ isolation: 'isolate' }}
           >
             {/* Sliding fill layer — sweeps left→right on hover, retreats right→left on leave */}
@@ -64,8 +65,9 @@ export function IntroProcessSection() {
             />
 
             {/* Button label + arrow */}
-            <span className="relative z-10 flex items-center gap-6">
+            <span className="relative z-10 flex items-center justify-center gap-3 sm:gap-6">
               <motion.span
+                className="whitespace-nowrap"
                 variants={{
                   idle: { color: '#000000' },
                   hover: { color: '#ffffff' },
@@ -76,7 +78,7 @@ export function IntroProcessSection() {
               </motion.span>
 
               {/* Arrow that slides in left → right on hover */}
-              <span className="inline-flex items-center" style={{ width: '1.4em', overflow: 'hidden' }}>
+              <span className="inline-flex w-[1.1em] sm:w-[1.4em] items-center overflow-hidden">
                 <motion.svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -84,7 +86,7 @@ export function IntroProcessSection() {
                   strokeWidth={2.5}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  style={{ width: '1em', height: '1em', flexShrink: 0 }}
+                  className="h-[1em] w-[1em] shrink-0"
                   variants={{
                     idle: { x: '-150%', color: '#000000', opacity: 0 },
                     hover: { x: '0%', color: '#ffffff', opacity: 1 },
