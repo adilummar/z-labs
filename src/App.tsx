@@ -13,7 +13,6 @@ import { BriefSection } from './sections/BriefSection';
 import { ContractSection } from './sections/ContractSection';
 import { HowToUseSection } from './sections/HowToUseSection';
 import { DirectorySection } from './sections/DirectorySection';
-import { MeetingsSection } from './sections/MeetingsSection';
 import { ImportantNotesSection } from './sections/ImportantNotesSection';
 import { TrustedBySection } from './sections/TrustedBySection';
 import { TestimonialsSection } from './sections/TestimonialsSection';
@@ -123,7 +122,6 @@ function App() {
   const {
     items,
     isOpen,
-    itemCount,
     addItem,
     updateQuantity,
     removeItem,
@@ -135,10 +133,7 @@ function App() {
     <div className="min-h-screen bg-beige">
       <ScrollToTop />
       <div className="min-h-screen bg-beige">
-        <Navigation
-          cartCount={itemCount}
-          onCartClick={openCart}
-        />
+        <Navigation />
         <Routes>
           <Route path="/" element={
             <HomePage

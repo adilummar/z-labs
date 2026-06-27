@@ -2,12 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import GlassSurface from './GlassSurface';
 
-interface NavigationProps {
-  cartCount?: number;
-  onCartClick?: () => void;
-}
-
-export function Navigation({ cartCount, onCartClick }: NavigationProps) {
+export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
