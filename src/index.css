@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 10% 82%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 0%;
+    --card-foreground: 30 10% 82%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 30 10% 82%;
+    --primary: 18 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 10% 82%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 30 10% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 18 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 18 100% 50%;
+    --radius: 0.625rem;
+    --sidebar-background: 30 10% 82%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 18 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 10% 90%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 18 100% 50%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-beige text-black font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-normal;
+    line-height: 1.1;
+  }
+
+  ::selection {
+    background-color: #ff5100;
+    color: white;
+  }
+}
+
+@layer components {
+  .btn-pill {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-pill border border-black text-black transition-colors duration-200 hover:text-highlight hover:border-highlight;
+  }
+
+  .btn-pill-highlight {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-pill border border-highlight text-highlight transition-colors duration-200;
+  }
+
+  .card-dark {
+    @apply bg-black rounded-card overflow-hidden;
+  }
+
+  .card-beige {
+    @apply bg-beige rounded-card overflow-hidden;
+  }
+
+  .card-light {
+    @apply bg-light-tint rounded-card overflow-hidden;
+  }
+
+  .text-accent {
+    @apply text-highlight;
+  }
+
+  .highlight-bg {
+    @apply bg-highlight text-white;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
